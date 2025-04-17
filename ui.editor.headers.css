@@ -1,0 +1,45 @@
+/* Показываем # только в Live Preview 
+https: //forum.obsidian.md/t/selectively-view-markdown-syntax-in-live-preview-specifically-for-headings/78196
+https: //chatgpt.com/c/67ff6e02-ad24-8008-83e8-5d73d1178274
+*/
+
+.markdown-source-view.is-live-preview .cm-line.HyperMD-header-1:not(.cm-active)::before {
+	content: "# ";
+	color: var(--text-faint);
+}
+
+.markdown-source-view.is-live-preview .cm-line.HyperMD-header-2:not(.cm-active)::before {
+	content: "## ";
+	color: var(--text-faint);
+}
+
+.markdown-source-view.is-live-preview .cm-line.HyperMD-header-3:not(.cm-active)::before {
+	content: "### ";
+	color: var(--text-faint);
+}
+
+.markdown-source-view.is-live-preview .cm-line.HyperMD-header-4:not(.cm-active)::before {
+	content: "#### ";
+	color: var(--text-faint);
+}
+
+.markdown-source-view.is-live-preview .cm-line.HyperMD-header-5:not(.cm-active)::before {
+	content: "##### ";
+	color: var(--text-faint);
+}
+
+.markdown-source-view.is-live-preview .cm-line.HyperMD-header-6:not(.cm-active)::before {
+	content: "###### ";
+	color: var(--text-faint);
+}
+
+
+/* Отключаем дублирование в редактируемой строке */
+.markdown-source-view.is-live-preview .cm-line.cm-active.HyperMD-header-1::before,
+.markdown-source-view.is-live-preview .cm-line.cm-active.HyperMD-header-2::before,
+.markdown-source-view.is-live-preview .cm-line.cm-active.HyperMD-header-3::before,
+.markdown-source-view.is-live-preview .cm-line.cm-active.HyperMD-header-4::before,
+.markdown-source-view.is-live-preview .cm-line.cm-active.HyperMD-header-5::before,
+.markdown-source-view.is-live-preview .cm-line.cm-active.HyperMD-header-6::before {
+	content: normal !important;
+}
