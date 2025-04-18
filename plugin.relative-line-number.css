@@ -1,0 +1,7 @@
+/* подсветка номера ткущей строки */
+.cm-gutterElement.relative-line-numbers-mono.cm-active {
+	--bold-color: orange !important;
+	color: orange !important;
+	font-size: var(--font-text-size) !important;
+	/*font-weight: 1800;*/
+}
